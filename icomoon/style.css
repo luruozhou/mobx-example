@@ -1,0 +1,247 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url('fonts/icomoon.eot?hiv3u1');
+  src: url('fonts/icomoon.eot?hiv3u1#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?hiv3u1') format('truetype'),
+    url('fonts/icomoon.woff?hiv3u1') format('woff'),
+    url('fonts/icomoon.svg?hiv3u1#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^='icon-'],
+[class*=' icon-'] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-error:before {
+  content: '\e900';
+}
+.icon-link2:before {
+  content: '\e901';
+}
+.icon-add-edit:before {
+  content: '\e902';
+}
+.icon-photo-mask:before {
+  content: '\e903';
+}
+.icon-skill:before {
+  content: '\e904';
+}
+.icon-phone:before {
+  content: '\e905';
+}
+.icon-people:before {
+  content: '\e906';
+}
+.icon-email:before {
+  content: '\e907';
+}
+.icon-warn:before {
+  content: '\e908';
+}
+.icon-city:before {
+  content: '\e909';
+}
+.icon-responsibility:before {
+  content: '\e90a';
+}
+.icon-card:before {
+  content: '\e90b';
+}
+.icon-edu:before {
+  content: '\e90c';
+}
+.icon-competition:before {
+  content: '\e90d';
+}
+.icon-paper:before {
+  content: '\e90e';
+}
+.icon-interview:before {
+  content: '\e90f';
+}
+.icon-uniE910:before {
+  content: '\e910';
+}
+.icon-uniE911:before {
+  content: '\e911';
+}
+.icon-uniE912:before {
+  content: '\e912';
+}
+.icon-intention:before {
+  content: '\e913';
+}
+.icon-requirement:before {
+  content: '\e914';
+}
+.icon-honor:before {
+  content: '\e915';
+}
+.icon-uniE916:before {
+  content: '\e916';
+}
+.icon-uniE917:before {
+  content: '\e917';
+}
+.icon-dot:before {
+  content: '\e918';
+}
+.icon-wechat:before {
+  content: '\e919';
+}
+.icon-internship:before {
+  content: '\e91a';
+}
+.icon-phone2:before {
+  content: '\e91b';
+}
+.icon-add:before {
+  content: '\e91c';
+}
+.icon-apply-reord:before {
+  content: '\e91d';
+}
+.icon-apply-reord2:before {
+  content: '\e91e';
+}
+.icon-position:before {
+  content: '\e91f';
+}
+.icon-project:before {
+  content: '\e920';
+}
+.icon-email2:before {
+  content: '\e921';
+}
+.icon-language:before {
+  content: '\e922';
+}
+.icon-certificate:before {
+  content: '\e923';
+}
+.icon-work-show:before {
+  content: '\e924';
+}
+.icon-Shape-Copy-3:before {
+  content: '\e925';
+}
+.icon-finger-post:before {
+  content: '\e926';
+}
+.icon-file-signet:before {
+  content: '\e927';
+}
+.icon-paper-plane:before {
+  content: '\e928';
+}
+.icon-shield:before {
+  content: '\e929';
+}
+.icon-left:before {
+  content: '\e92a';
+}
+.icon-search:before {
+  content: '\e92b';
+}
+.icon-link:before {
+  content: '\e92c';
+}
+.icon-gender:before {
+  content: '\e92d';
+}
+.icon-download:before {
+  content: '\e92e';
+}
+.icon-return:before {
+  content: '\e92f';
+}
+.icon-addJob:before {
+  content: '\e930';
+}
+.icon-attachment:before {
+  content: '\e931';
+}
+.icon-Interview:before {
+  content: '\e932';
+}
+.icon-log:before {
+  content: '\e933';
+}
+.icon-remarks:before {
+  content: '\e934';
+}
+.icon-tel-off:before {
+  content: '\e935';
+}
+.icon-tel-on:before {
+  content: '\e936';
+}
+.icon-edit:before {
+  content: '\e937';
+}
+.icon-pencil:before {
+  content: '\e938';
+}
+.icon-arrow-down:before {
+  content: '\e939';
+}
+.icon-description:before {
+  content: '\e93a';
+}
+.icon-lock:before {
+  content: '\e93b';
+}
+.icon-Combined-Shape-Copy-2:before {
+  content: '\e93c';
+}
+.icon-right:before {
+  content: '\e93d';
+}
+.icon-location-fill:before {
+  content: '\e93e';
+}
+.icon-education:before {
+  content: '\e93f';
+}
+.icon-workYear:before {
+  content: '\e940';
+}
+.icon-close:before {
+  content: '\e941';
+}
+.icon-record:before {
+  content: '\e942';
+}
+.icon-close-o:before {
+  content: '\e943';
+}
+.icon-gift:before {
+  content: '\e944';
+}
+.icon-mobile:before {
+  content: '\e958';
+}
+.icon-notification:before {
+  content: '\ea08';
+}
+.icon-checkmark:before {
+  content: '\ea10';
+}
+.icon-info-new:before {
+  content: '\e945';
+  color: #118bfb;
+}

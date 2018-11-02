@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "jsx": "react",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true, // 启用装饰器
+    "strictNullChecks": false,
+    "outDir": "dist",
+    "strict": false,
+    "allowSyntheticDefaultImports": true, // 不用写import * as A from {A} ，直接写import A from {A}
+    "watch": true,
+    "types": ["webpack-env"],
+    "lib": ["es2017", "dom"] // 解决asyn await 的兼容
+  },
+  "exclude": ["dist", "node_modules"],
+  "include": ["./src/**/*.ts", "./src/**/*.tsx"]
+}
