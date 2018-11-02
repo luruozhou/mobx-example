@@ -7,7 +7,7 @@
     "start": "webpack-dev-server",
     "server": "node server.js",
     "precommit": "lint-staged",
-    "format": "prettier '{src,data,dev,iconfont}/**/*.{js,jsx,ts,tsx,scss,css}' --write --single-quote --no-semi",
+    "format":"prettier --single-quote --trailing-comma es5 --write \"src/**/*.{js,jsx,ts,tsx,scss,css}\" && yarn fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "lint-staged": {
