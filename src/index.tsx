@@ -19,8 +19,8 @@ function Example() {
   // Similar to componentDidMount and componentDidUpdate:
   useEffect(
     () => {
-            console.log(11, count);
-             let a = 'a  a'   ;
+      console.log(11, count);
+      let a = 'a  a';
       document.title = `${count} times`;
       function m() {
         console.log('mmm');
