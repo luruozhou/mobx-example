@@ -1,4 +1,4 @@
-import './app.css'
+import './app.css';
 // import _ from 'lodash';
 //
 // console.log(
@@ -6,9 +6,9 @@ import './app.css'
 // );
 
 export function square(x) {
-  return x * x
+  return x * x;
 }
 
 export function cube(x) {
-  return x * x * x
+  return x * x * x;
 }
