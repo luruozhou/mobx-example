@@ -20,7 +20,7 @@ function Example() {
   useEffect(
     () => {
       console.log(11, count);
-        let a=333;
+           let a=333;
       document.title = `${count} times`
       function m() {
         console.log('mmm')
