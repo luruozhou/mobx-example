@@ -1,57 +1,32 @@
 // import './App/app'
 
 import * as React from 'react';
-import { useState, useEffect } from 'react';
 import { render } from 'react-dom';
+import proptypes from 'proptypes';
 
-var originCreateElement = document.createElement;
-document.createElement = function() {
-  if (arguments[0] === 'span') {
-    console.log('create span');
+class Test extends React.Component<any, any> {
+  static propTypes = {
+    name: proptypes.string.isRequired,
+  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: 1,
+    };
   }
-  return originCreateElement.apply(document, arguments);
-};
-
-function Example() {
-  const [count, setCount] = useState(0);
-  const [egg, setEgg] = useState({ name: 'egg1' });
-
-  // Similar to componentDidMount and componentDidUpdate:
-  useEffect(
-    () => {
-      console.log(11, count);
-      let a = 'a  a';
-      document.title = `${count} times`;
-      function m() {
-        console.log('mmm');
-      }
-    },
-    [egg]
-  );
-
-  console.log('render');
-  return (
-    <div>
-      <p>You clicked {count} times</p>
-      <button
-        onClick={() => {
-          setCount(count + 1);
-        }}
-      >
-        Click me
-      </button>
-      <button
-        onClick={() => {
-          setEgg({ name: egg.name + 1 });
-        }}
-      >
-        Click me
-      </button>
-
-      <h1>{count}</h1>
-      <h1>{egg.name}</h1>
-    </div>
-  );
+  componentDidMount() {
+    this.setState({
+      count: this.state.count + 1,
+    });
+  }
+  render() {
+    return (
+      <div>
+        <h1>{this.props.name}</h1>
+        {this.state.count}
+      </div>
+    );
+  }
 }
 
-render(<Example />, document.getElementById('app'));
+render(<Test name="jim" />, document.getElementById('app'));
