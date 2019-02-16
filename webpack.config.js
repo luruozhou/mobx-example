@@ -5,6 +5,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
   .BundleAnalyzerPlugin
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 const webpack = require('webpack')
+let createMobxTransformer = require('./build/transformer/createMobxTransformer')
 
 module.exports = {
   mode: 'development',
@@ -12,6 +13,7 @@ module.exports = {
     app: './src/index.tsx'
   },
   devtool: 'cheap-module-eval-source-map',
+  mode:"development",
   output: {
     filename: '[name].bundle.js',
     chunkFilename: '[name].chunk.js',
@@ -47,28 +49,42 @@ module.exports = {
   ],
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
-    alias: {
-      // 'react': 'anujs',
-      // 'react-dom': 'anujs',
-    }
   },
   module: {
     rules: [
       {
         test: /\.tsx?$/,
-        // use: 'ts-loader',
         use: [
           {
             loader: 'ts-loader',
             options: {
               transpileOnly: true,
-              experimentalWatchApi: true
+              experimentalWatchApi: true,
+              getCustomTransformers: () => {
+                return ({
+                  before: [createMobxTransformer()]
+                })
+              }
             }
           }
         ],
         exclude: /node_modules/
       },
       { test: /\.js|jsx$/, use: 'babel-loader', exclude: /node_modules/ },
+      {
+        test: /\.(sa|sc|c)ss$/,
+        use: [
+          "style-loader",
+          "css-loader",
+          {
+            loader:"postcss-loader",
+            options: {
+              plugins: [require('autoprefixer')('last 100 versions')]
+            }
+          },
+          "sass-loader"
+        ],
+      },
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
