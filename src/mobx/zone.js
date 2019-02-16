@@ -41,7 +41,7 @@ export default class AsyncManager {
       let propKeys = this.getFunctionKeys(storeInstance);
       propKeys.forEach(prop => {
         if (typeof storeInstance[prop] === 'function') {
-          storeInstance[prop] = this.wrap(
+          storeInstance[prop] = this.wrapStoreFunc(
             storeInstance[prop],
             storeInstance,
             prop
@@ -52,7 +52,7 @@ export default class AsyncManager {
     }
   }
 
-  wrap = (fn, context, prop) => {
+  wrapStoreFunc = (fn, context, prop) => {
     return (...args) => {
       if (Zone.current !== this.zone) {
         console.error(
@@ -81,7 +81,7 @@ export default class AsyncManager {
       let propKeys = this.getFunctionKeys(actionInstance);
       propKeys.forEach(prop => {
         if (typeof actionInstance[prop] === 'function') {
-          actionInstance[prop] = this.wrapSingleAction(actionInstance, prop);
+          actionInstance[prop] = this.wrapActionFunc(actionInstance, prop);
         }
       });
 
@@ -89,7 +89,7 @@ export default class AsyncManager {
     }
   }
 
-  wrapSingleAction(action, prop) {
+  wrapActionFunc(action, prop) {
     let origin = action[prop];
     return (...args) => {
       return this.zone.run(origin, action, args);
@@ -97,6 +97,7 @@ export default class AsyncManager {
   }
 
   getFunctionKeys(obj) {
+    //获取实例和原型上的属性
     let objProto = Object.getPrototypeOf(obj) || obj.__proto__;
     let propKeys = [
       ...Object.keys(obj),

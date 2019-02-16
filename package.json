@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "webpack-dev-server --history-api-fallback",
     "server": "node server.js",
     "precommit": "lint-staged",
     "format": "prettier --single-quote --trailing-comma es5 --write \"src/**/*.{js,jsx,ts,tsx,scss,css}\"",

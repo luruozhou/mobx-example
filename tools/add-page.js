@@ -65,6 +65,7 @@ let rootPagePath = Path.join(process.cwd(), basePath, rootPageName)
 
 
 let pageTplData = {
+  rootPageName,
   uppercaseName: fisrtToUppercase(fileDirectoryName),
   lowercaseName: fisrtToLowercase(fileDirectoryName),
   splitDashName: toSplitDash(pageOrComPath),

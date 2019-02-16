@@ -1,0 +1,33 @@
+$prefixClass: 'page-demo__goods-list';
+
+.#{$prefixClass} {
+  width: 200px;
+  color: hsla(0, 0%, 100%, 0.7);
+  background-color: #363d4a;
+  height: 100%;
+  float: left;
+  padding-bottom: 10000px;
+  margin-bottom: -10000px;
+  ul {
+    li {
+      &.active {
+        background-color: #2b303b;
+        color: #fff;
+        border-left-color: #118bfb;
+      }
+      &:hover {
+        color: #fff;
+        text-decoration: none;
+      }
+      border-left-style: solid;
+      border-left-color: transparent;
+      display: block;
+      padding: 10px 0;
+      cursor: pointer;
+      padding-left: 37px;
+      border-left-width: 3px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
