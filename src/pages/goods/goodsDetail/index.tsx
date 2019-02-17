@@ -28,7 +28,7 @@ function injector({
 @observer
 export default class GoodsDetail extends React.Component<Props, {}> {
   static defaultProps = {
-    prefixCls: 'page-demo__goods-detail',
+    prefixCls: 'page-goods__goods-detail',
   };
 
   constructor(props) {

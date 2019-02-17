@@ -5,14 +5,12 @@ import createHistory from 'history/lib/createBrowserHistory';
 let history = useRouterHistory(createHistory)();
 
 let pages = {
-  Home: () => import('../pages/home/index'),
-  Demo: () => import('../pages/goods/index'),
+  Goods: () => import('../pages/goods/index'),
 };
 
 const routes = (
   <Router history={history}>
-    <Route path="/" getComponent={toGetter(pages.Home)} />
-    <Route path="/goods" getComponent={toGetter(pages.Demo)} />
+    <Route path="/" getComponent={toGetter(pages.Goods)} />
   </Router>
 );
 

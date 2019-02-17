@@ -28,7 +28,7 @@ function injector({
 @observer
 export default class GoodsList extends React.Component<Props, {}> {
   static defaultProps = {
-    prefixCls: 'page-demo__goods-list',
+    prefixCls: 'page-goods__goods-list',
   };
 
   constructor(props) {
@@ -38,7 +38,9 @@ export default class GoodsList extends React.Component<Props, {}> {
   componentDidMount() {}
 
   onSelectGoods = goods => {
-    let { pageAction } = this.props;
+    let { pageAction, pageStore } = this.props;
+
+    // pageStore.goodsDetailStore.setLoading(true); //如果在组件内直接调用store的方法，会给出无效的提示
     pageAction.goodsListAction.setCurrentGoods(goods);
   };
 

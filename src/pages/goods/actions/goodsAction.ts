@@ -2,7 +2,7 @@ import { mAction } from '../../../mobx/action';
 import { IRootStore, IRootAction } from '../../../typings/index';
 
 @mAction
-export default class DemoAction {
+export default class GoodsAction {
   constructor(
     public stores: IRootStore['goods'],
     public actions: IRootAction['goods']

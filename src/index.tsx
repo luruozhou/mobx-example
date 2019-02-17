@@ -6,6 +6,10 @@ import './mobxDependence';
 
 @provider
 class App extends React.Component<any, any> {
+  static defaultProps = {
+    prefixCls: 'app-container',
+  };
+
   constructor(props) {
     super(props);
   }
@@ -13,7 +17,13 @@ class App extends React.Component<any, any> {
   componentDidMount() {}
 
   render() {
-    return routes;
+    let { prefixCls } = this.props;
+    return (
+      <div className={prefixCls}>
+        <div onClick={() => console.log('this is a mobx project')} />
+        {routes}
+      </div>
+    );
   }
 }
 

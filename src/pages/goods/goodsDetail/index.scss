@@ -1,4 +1,9 @@
-$prefixClass: 'page-demo__goods-detail';
+$prefixClass: 'page-goods__goods-detail';
 
 .#{$prefixClass} {
+  padding: 20px;
+  margin-left: 200px;
+  img {
+    width: 100px;
+  }
 }

@@ -18,16 +18,14 @@ function injector({
   rootStore: IRootStore;
   rootAction: IRootAction;
 }) {
-  return {
-    rootStore: rootStore.home.homeStore,
-  };
+  return {};
 }
 
 @inject(injector)
 @observer
-export default class Home extends React.Component<Props, {}> {
+export default class AComponent extends React.Component<Props, {}> {
   static defaultProps = {
-    prefixCls: 'page-home',
+    prefixCls: 'component-a-component',
   };
 
   constructor(props) {
@@ -38,6 +36,6 @@ export default class Home extends React.Component<Props, {}> {
 
   render() {
     let { prefixCls } = this.props;
-    return <div className={prefixCls}>home</div>;
+    return <div className={prefixCls}>一个通用组件</div>;
   }
 }

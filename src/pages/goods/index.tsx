@@ -21,13 +21,13 @@ function injector({
   rootAction: IRootAction;
 }) {
   return {
-    pageAction: rootAction.goods.demoAction,
+    pageAction: rootAction.goods,
   };
 }
 
 @inject(injector)
 @observer
-export default class Demo extends React.Component<Props, {}> {
+export default class Goods extends React.Component<Props, {}> {
   static defaultProps = {
     prefixCls: 'page-goods',
   };
@@ -38,7 +38,7 @@ export default class Demo extends React.Component<Props, {}> {
 
   async componentDidMount() {
     let { pageAction } = this.props;
-    await pageAction.init();
+    await pageAction.goodsAction.init();
   }
 
   render() {
